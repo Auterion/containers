@@ -26,7 +26,7 @@ ENV ANDROID_NDK_TOOLCHAIN_VERSION=4.9
 ENV QMAKESPEC=android-clang
 ENV QT_PLATFORM=android_armv7
 
-ENV QGC_ANDROID_GSTREAMER_URL=https://gstreamer.freedesktop.org/pkg/android/1.14.4/gstreamer-1.0-android-universal-1.14.4.tar.bz2
+ENV QGC_ANDROID_GSTREAMER_URL=https://qgroundcontrol.s3.amazonaws.com/dependencies/unchanged-gstreamer-1.0-android-universal-1.14.4.tar.bz2
 ENV QGC_ANDROID_GSTREAMER_PATH=/opt/gstreamer-1.0-android-universal-1.14.4
 
 ENV ANDROID_SDK_ROOT=${ANDROID_HOME}
