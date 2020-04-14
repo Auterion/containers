@@ -9,6 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: Auterion/checkout@v2
+    - name: free disk space
+      run: df -h /
+        && sudo swapoff -a
+        && sudo rm -f /swapfile
+        && sudo apt clean
+        && docker rmi $(docker image ls -aq)
+        && df -h /
     - name: Build the Docker image
       env:
         QT_CI_LOGIN: ${{ secrets.QT_CI_LOGIN }}
